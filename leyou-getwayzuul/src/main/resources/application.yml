@@ -1,0 +1,48 @@
+server:
+  port: 10011
+spring:
+  application:
+    name: leyou-gateway
+eureka:
+  client:
+    registry-fetch-interval-seconds: 5
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+zuul:
+  prefix: /api
+  routes:
+    item-service : /item/**   # 路由到商品微服务
+
+    search-service : /search/**  # 路由到搜索微服务
+
+    user-service : /user/** #用户微服务
+
+    auth-service : /auth/** #用户微服务
+
+    cart-service : /cart/** #购物车微服务
+
+    order-service : /order/** #购物车微服务
+  add-host-header: true
+  retryable: true
+  sensitive-headers: #覆盖默认敏感头信息
+ribbon:
+  ConnectTimeout: 250 # 连接超时时间(ms)
+  ReadTimeout: 2000 # 通信超时时间(ms)
+  OkToRetryOnAllOperations: true # 是否对所有操作重试
+  MaxAutoRetriesNextServer: 2 # 同一服务不同实例的重试次数
+  MaxAutoRetries: 1 # 同一实例的重试次数
+leyou:
+  jwt:
+    secret: leyou@Login(Auth}*^31)&heiMa% # 登录校验的密钥
+    pubKeyPath: E:\\视频\\rsa\\rsa.pub # 公钥地址
+    expire: 30 # 过期时间,单位分钟
+    cookieName: LY_TOKEN
+  filter:
+    allowPaths:
+      - /api/auth
+      - /api/search
+      - /api/user/register
+      - /api/user/check
+      - /api/user/code
+      - /api/item
+
