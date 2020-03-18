@@ -702,7 +702,7 @@
                     //如果用户登录,请求后台,把购物车信息添加到redis里面
                     ly.http.post("/cart",{skuId: this.sku.id,num: this.num}).then(res=>{
                         //跳转到购物车
-                        window.location = "http://www.sspu.com/cart.html";
+                        window.location = "http://sspu.nat300.top/cart.html";
                     })
 
                 }).catch(()=> {
@@ -728,7 +728,7 @@
                     }
                     ly.store.set("LY_CART", carts);
                     //跳转到购物车
-                    window.location = "http://www.sspu.com/cart.html";
+                    window.location = "http://sspu.nat300.top/cart.html";
                 });
 
             },

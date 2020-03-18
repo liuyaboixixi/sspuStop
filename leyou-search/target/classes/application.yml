@@ -7,7 +7,7 @@ spring:
   data:
     elasticsearch:
       cluster-name: elasticsearch
-      cluster-nodes: 192.168.85.134:9300
+      cluster-nodes: 192.168.85.136:9300
   rabbitmq:
     host: 127.0.0.1
     virtual-host: /leyou

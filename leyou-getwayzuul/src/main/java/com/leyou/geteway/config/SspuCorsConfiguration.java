@@ -13,8 +13,8 @@ public class SspuCorsConfiguration {
         //1.添加CORS配置信息
         CorsConfiguration config = new CorsConfiguration();
         //2允许的域
-        config.addAllowedOrigin("http://manage.sspu.com");
-        config.addAllowedOrigin("http://www.sspu.com");
+        config.addAllowedOrigin("http://manage.sspu.nat300.top");
+        config.addAllowedOrigin("http://sspu.nat300.top");
         config.setAllowCredentials(true); //允许携带cookie
         //3.是否发出Cookie 信息
         config.addAllowedMethod("*");

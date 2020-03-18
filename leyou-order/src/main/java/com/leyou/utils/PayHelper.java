@@ -58,7 +58,7 @@ public class PayHelper {
             //调用微信支付的终端IP（乐优商城的IP）
             data.put("spbill_create_ip", "127.0.0.1");
             //回调地址，付款成功后的接口
-            data.put("notify_url", "http://test.sspu.com/wxpay/notify");
+            data.put("notify_url", "http://test.sspu.nat300.top/wxpay/notify");
             // 交易类型为扫码支付
             data.put("trade_type", "NATIVE");
             //商品id,使用假数据

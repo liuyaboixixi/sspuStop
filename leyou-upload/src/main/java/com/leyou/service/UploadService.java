@@ -40,7 +40,7 @@ public class UploadService {
         //保存到服务器
         file.transferTo( new File("D:\\javaStudy\\JAVACODE\\IDEACODE\\leyou\\leyou-upload\\images\\"+originalFilename));
         //返回url，进行回显
-        return "http://image.sspu.com/images/" + originalFilename;
+        return "http://image.sspu.nat300.top/images/" + originalFilename;
     } catch (IOException e) {
         LOGGER.info("服务器内部错误：{}", originalFilename);
         e.printStackTrace();
