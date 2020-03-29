@@ -27,8 +27,8 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("乐优商城订单系统")
-                .description("乐优商城订单系统接口文档")
+                .title("sspu商城订单系统")
+                .description("sspu商城订单系统接口文档")
                 .version("1.0")
                 .build();
     }

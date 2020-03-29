@@ -2,7 +2,9 @@ server:
   port: 8005
 spring:
   redis:
-    host: 47.103.216.75
+    host: 106.75.90.146
+    port: 6379
+    password: 123456
   rabbitmq:
     host: 127.0.0.1
     virtual-host: /leyou
