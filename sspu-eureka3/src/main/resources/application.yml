@@ -1,0 +1,17 @@
+server:
+  port: 10087
+spring:
+  application:
+    name: sspu-eureka
+eureka:
+  instance:
+    hostname: sspu-eureka
+    non-secure-port: ${server.port}
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka ,http://127.0.0.1:10088/eureka
+    register-with-eureka: true
+    fetch-registry: false
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 5000

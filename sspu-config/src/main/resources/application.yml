@@ -1,0 +1,22 @@
+server:
+  port: 10085
+spring:
+  application:
+    name: sspu-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:liuyaboixixi/sspu_config.git
+          search-paths:
+            sspu_config
+      label: master
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka,http://127.0.0.1:10087/eureka,http://127.0.0.1:10088/eureka
+
+    registry-fetch-interval-seconds: 10
+  instance:
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 15

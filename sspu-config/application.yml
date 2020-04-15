@@ -1,0 +1,30 @@
+server:
+  port: 8007
+spring:
+  application:
+    name: auth-service
+  redis:
+    host: 106.75.90.146
+    port: 6379
+    password: 123456
+  rabbitmq:
+    host: 127.0.0.1
+    virtual-host: /leyou
+    username: leyou
+    password: leyou
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka,http://127.0.0.1:10087/eureka,http://127.0.0.1:10088/eureka
+
+    registry-fetch-interval-seconds: 10
+  instance:
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 15
+leyou:
+  jwt:
+    secret: leyou@Login(Auth}*^31)&heiMa% # 登录校验的密钥
+    pubKeyPath: E:\\视频\\rsa\\rsa.pub # 公钥地址
+    priKeyPath: E:\\视频\\rsa\\rsa.pri # 私钥地址
+    expire: 30 # 过期时间,单位分钟
+    cookieName: LY_TOKEN
